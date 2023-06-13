@@ -32,6 +32,7 @@ public class Main {
         myArrayList.print();
         System.out.println(myArrayList.isEmpty());
         System.out.println(myArrayList.size());
+        System.out.println("test");
 
 
 
