@@ -8,38 +8,68 @@ public class MyArrayList {
 
     private int currentSize = 0;
 
-    public void add(Object o){
-
+    public MyArrayList() {
+        objects = new Object[10];
     }
 
-    public void remove(Object o){
-
+    public MyArrayList(int size) {
+        objects = new Object[size];
     }
 
-    public void remove(int index){
-        if (currentSize < 1 || index >= currentSize || index < 0){
+    public void add(Object o) {
+        if (currentSize == objects.length) {
+            Object[] newArray = Arrays.copyOf(this.objects, (this.objects.length * 2 + 1));
+            this.objects = newArray;
+        }
+        this.objects[currentSize++] = o;
+    }
+
+    public boolean remove(Object o) {
+        boolean removed = false;
+        for (int i = 0; i < currentSize; i++) {
+            if (objects[i].equals(o)) {
+                remove(i);
+                removed = true;
+            }
+        }
+        return removed;
+    }
+
+    public void remove(int index) {
+        if (index >= currentSize || index < 0) {
             throw new IndexOutOfBoundsException();
         }
-        Object[] end = Arrays.copyOfRange(this.objects, index+1, currentSize);
-        Object[] newArray = Arrays.copyOf(this.objects , currentSize-1);
-        int j = 0;
 
-        for (int i = index; i < newArray.length; i++) {
-            newArray[i] = end[j++];
+        for (; index < currentSize - 1; index++) {
+            objects[index] = objects[index + 1];
         }
-        this.objects = newArray;
-        currentSize --;
+        objects[index] = null;
+        currentSize--;
+
     }
 
-    public boolean isEmpty(){
-        return false;
+    public boolean isEmpty() {
+
+        return currentSize == 0;
     }
 
-    public Object get(int index){
+    public Object get(int index) {
+        if (index >= currentSize || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
         return this.objects[index];
     }
-    public int size(){
+
+    public int size() {
         return currentSize;
+    }
+
+    public void print() {
+        System.out.print("[");
+        for (int i = 0; i < this.objects.length; i++) {
+            System.out.print(" " + this.objects[i] + " ");
+        }
+        System.out.println("]");
     }
 
 }

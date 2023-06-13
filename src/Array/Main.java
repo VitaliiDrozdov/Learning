@@ -1,14 +1,16 @@
 package Array;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
 
-    public static void lastEven(int[]array){
-        for (int i = array.length-1; i >= 0; i--) {
-            if (array[i] % 2 == 0){
+    public static void lastEven(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            if (array[i] % 2 == 0) {
                 System.out.println("Індекс останнього парного елемента: " + i + ".");
                 return;
             }
@@ -20,15 +22,13 @@ public class Main {
 
         Random random = new Random();
 
-        int [] array = new int[10];
+        int[] array = new int[10];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(-10, 11);
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
+
+        System.out.println(Arrays.toString(array));
 
         lastEven(array);
 
@@ -39,21 +39,21 @@ public class Main {
         int oddSum = 0;
         int evenSum = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0){
+            if (array[i] > 0) {
                 positiveElementCount++;
                 positiveElemenIndextSum += i;
                 positiveElementsProduct *= array[i];
-            } else if (array[i] < 0){
+            } else if (array[i] < 0) {
                 negativeElementCount++;
             }
-            if (array[i] % 2 == 0){
+            if (array[i] % 2 == 0) {
                 evenSum++;
             } else {
                 oddSum++;
             }
         }
 
-        if (positiveElementCount !=0){
+        if (positiveElementCount != 0) {
             System.out.println("Кількість додатних елементів: " + positiveElementCount + ".");
             System.out.println("Сумма індексів додатних елементів: " + positiveElemenIndextSum + ".");
             System.out.println("Добуток додатних елементів: " + positiveElementsProduct + ".");
@@ -62,7 +62,7 @@ public class Main {
             System.out.println("У цьому масиві відсутні додатні числа.");
         }
 
-        if (negativeElementCount !=0){
+        if (negativeElementCount != 0) {
             System.out.println("Кількість від'ємних елементів: " + negativeElementCount + ".");
         } else {
             System.out.println("У цьому масиві відсутні від'ємні числа.");
@@ -76,11 +76,11 @@ public class Main {
         int maxValue = array[0];
         int maxIndex = 0;
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > maxValue){
+            if (array[i] > maxValue) {
                 maxValue = array[i];
                 maxIndex = i;
             }
-            if (array[i] < minValue){
+            if (array[i] < minValue) {
                 minValue = array[i];
                 minIndex = i;
             }
@@ -90,10 +90,16 @@ public class Main {
 
         int specialElementSum = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < i){
+            if (array[i] < i) {
                 specialElementSum += array[i];
             }
         }
         System.out.println("Сума елементів які менші за їх індекси = " + specialElementSum + ".");
+
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+
+
+
     }
 }
