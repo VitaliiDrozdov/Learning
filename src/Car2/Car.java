@@ -12,5 +12,4 @@ public class Car {
         this.wheel = new Wheel(wheelDiameter);
         this.steeringWheel = new SteeringWheel(size, sWcolor);
     }
-    
 }

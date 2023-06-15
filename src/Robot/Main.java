@@ -2,7 +2,7 @@ package Robot;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Robot[] robotsBand = new Robot[5];
 
@@ -12,7 +12,7 @@ public class Main {
         robotsBand[3] = new RobotCoocker();
 
         for (int i = 0; i < robotsBand.length; i++) {
-            if(robotsBand[i] != null){
+            if (robotsBand[i] != null) {
                 robotsBand[i].work();
             }
         }

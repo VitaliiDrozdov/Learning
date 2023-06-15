@@ -34,8 +34,6 @@ public class Main {
         System.out.println(myArrayList.size());
         System.out.println("test");
 
-
-
     }
 
 }

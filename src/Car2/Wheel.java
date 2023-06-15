@@ -15,7 +15,7 @@ public class Wheel {
         this.diametr = diametr;
     }
 
-    public void increaseWheelDiameter(int multiplier){
+    public void increaseWheelDiameter(int multiplier) {
         this.diametr *= multiplier;
     }
 }

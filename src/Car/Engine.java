@@ -8,7 +8,7 @@ public class Engine {
         odometer = 0;
     }
 
-    public void drive (String brand){
+    public void drive(String brand) {
         System.out.println("Машина " + brand + " їде");
         odometer++;
     }

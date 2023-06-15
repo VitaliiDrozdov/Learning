@@ -1,11 +1,7 @@
 package Array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
 
     public static void lastEven(int[] array) {
@@ -95,11 +91,5 @@ public class Main {
             }
         }
         System.out.println("Сума елементів які менші за їх індекси = " + specialElementSum + ".");
-
-        Arrays.sort(array);
-        System.out.println(Arrays.toString(array));
-
-
-
     }
 }

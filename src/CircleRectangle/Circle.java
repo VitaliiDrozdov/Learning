@@ -16,14 +16,14 @@ public class Circle {
         this.diameter = diameter;
     }
 
-    public void circleArea(){
+    public void circleArea() {
         double circleArea = pi * this.semidiameter * this.semidiameter;
         System.out.println("Площа кола = " + circleArea + ".");
     }
 
-    public void circleLength (){
+    public void circleLength() {
         double circleLength = pi * this.diameter;
-        System.out.println("Довжина кола = "+ circleLength + ".");
+        System.out.println("Довжина кола = " + circleLength + ".");
     }
 
 }

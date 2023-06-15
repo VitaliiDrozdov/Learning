@@ -71,5 +71,4 @@ public class MyArrayList {
         }
         System.out.println("]");
     }
-
 }

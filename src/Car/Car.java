@@ -11,21 +11,21 @@ public class Car {
         this.engine = new Engine();
     }
 
-    public void getIntoCar(Driver driver){
+    public void getIntoCar(Driver driver) {
         this.driver = driver;
         System.out.println(this.driver.name + " сів до " + this.brand);
     }
 
-    public void getOutCar(){
+    public void getOutCar() {
         System.out.println(this.driver.name + " вийшов з " + this.brand);
         this.driver = null;
     }
 
-    public void drive(){
+    public void drive() {
         this.engine.drive(this.brand);
     }
 
-    public void getInfo(){
+    public void getInfo() {
         if (this.driver != null) {
             System.out.println(this.driver.name +
                     " сидить у " +
