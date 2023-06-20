@@ -9,7 +9,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String enteredText = scanner.nextLine();
         String[] wordCount = enteredText.split(" ");
-        System.out.println("В цьому тексті "+wordCount.length+" сдів.");
+        System.out.println("В цьому тексті " + wordCount.length + " сдів.");
+
 
     }
 }

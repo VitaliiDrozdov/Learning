@@ -8,7 +8,8 @@ public class VowelsLess {
     }
 
     public static String vowelsLess1(String enteredText) {
-        return enteredText.replaceAll("a", "-").
+        return enteredText.
+                replaceAll("a", "-").
                 replaceAll("A", "-").
                 replaceAll("e", "-").
                 replaceAll("E", "-").

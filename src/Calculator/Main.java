@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Integer a = 7;
+        Integer a = Integer.MAX_VALUE;
         Double b = 6.53d;
         Float c = 12.45f;
         Long d = 34L;
