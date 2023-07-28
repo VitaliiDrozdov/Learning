@@ -5,24 +5,38 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        AnimalCreator animalCreator = new AnimalCreator();
-        PersonCreator personCreator = new PersonCreator();
+        ZooClub zooClub = new ZooClub();
 
-        List<Animal> animals = new ArrayList<>();
-        animals.add(animalCreator.createAnimal());
-        animals.add(animalCreator.createAnimal());
-        animals.add(animalCreator.createAnimal());
-        for (Animal animal : animals) {
-            System.out.println(animal.toString());
+
+        if (zooClub.addPerson()) {
+            System.out.println("Додано нового члена клубу");
+        } else {
+            System.out.println("Член з таким ім'ям уже є у клубі");
+        }
+        if (zooClub.addPerson()) {
+            System.out.println("Додано нового члена клубу");
+        } else {
+            System.out.println("Член з таким ім'ям уже є у клубі");
         }
 
-        List<Person> people = new ArrayList<>();
-        people.add(personCreator.createPerson());
-        people.add(personCreator.createPerson());
-        people.add(personCreator.createPerson());
-        for (Person person : people) {
-            System.out.println(person.toString());
+        if (zooClub.addAnimalToPerson()) {
+            System.out.println("Додано нову тваринку члену клубу");
+        } else {
+            System.out.println("Член з таким ім'ям немає у клубі");
+        }if (zooClub.addAnimalToPerson()) {
+            System.out.println("Додано нову тваринку члену клубу");
+        } else {
+            System.out.println("Член з таким ім'ям немає у клубі");
+        }if (zooClub.addAnimalToPerson()) {
+            System.out.println("Додано нову тваринку члену клубу");
+        } else {
+            System.out.println("Член з таким ім'ям немає у клубі");
         }
+        zooClub.showAllZooClub();
+
+
+
+
 
     }
 }

@@ -4,31 +4,32 @@ import java.util.Objects;
 
 public class Person {
     private String humanName;
-    private Integer age;
+    private Integer humanAge;
 
-    public Person(String name, Integer age) {
-        this.humanName = name;
-        this.age = age;
+    public Person(String humanName, Integer humanAge) {
+        this.humanName = humanName;
+        this.humanAge = humanAge;
     }
 
     @Override
     public String toString() {
         return "Person{" +
                 "humanName='" + humanName + '\'' +
-                ", age=" + age +
+                ", age=" + humanAge +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Person person)) return false;
-        return Objects.equals(getHumanName(), person.getHumanName()) && Objects.equals(getAge(), person.getAge());
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(humanName, person.humanName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getHumanName(), getAge());
+        return Objects.hash(humanName);
     }
 
     public String getHumanName() {
@@ -39,11 +40,11 @@ public class Person {
         this.humanName = humanName;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getHumanAge() {
+        return humanAge;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setHumanAge(Integer humanAge) {
+        this.humanAge = humanAge;
     }
 }

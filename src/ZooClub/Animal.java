@@ -7,7 +7,7 @@ public class Animal {
     private String animalName;
 
     public Animal(String animalType, String animalName) {
-        AnimalType animalTypeArray[] = AnimalType.values();
+        AnimalType[] animalTypeArray = AnimalType.values();
         for (AnimalType Type : animalTypeArray) {
             String typeString = Type.toString();
             if (animalType.equalsIgnoreCase(typeString)) {
