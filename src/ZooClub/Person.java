@@ -3,12 +3,11 @@ package ZooClub;
 import java.util.Objects;
 
 public class Person {
-    private String humanName;
+    private final String humanName;
     private Integer humanAge;
 
-    public Person(String humanName, Integer humanAge) {
+    public Person(String humanName) {
         this.humanName = humanName;
-        this.humanAge = humanAge;
     }
 
     @Override
@@ -34,10 +33,6 @@ public class Person {
 
     public String getHumanName() {
         return humanName;
-    }
-
-    public void setHumanName(String humanName) {
-        this.humanName = humanName;
     }
 
     public Integer getHumanAge() {

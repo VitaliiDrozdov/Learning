@@ -1,5 +1,7 @@
 package ZooClub;
 
+import ZooClub.UIMenu.*;
+
 import java.util.*;
 
 public class Main {
@@ -7,35 +9,23 @@ public class Main {
 
         ZooClub zooClub = new ZooClub();
 
-
-        if (zooClub.addPerson()) {
-            System.out.println("Додано нового члена клубу");
-        } else {
-            System.out.println("Член з таким ім'ям уже є у клубі");
-        }
-        if (zooClub.addPerson()) {
-            System.out.println("Додано нового члена клубу");
-        } else {
-            System.out.println("Член з таким ім'ям уже є у клубі");
-        }
-
-        if (zooClub.addAnimalToPerson()) {
-            System.out.println("Додано нову тваринку члену клубу");
-        } else {
-            System.out.println("Член з таким ім'ям немає у клубі");
-        }if (zooClub.addAnimalToPerson()) {
-            System.out.println("Додано нову тваринку члену клубу");
-        } else {
-            System.out.println("Член з таким ім'ям немає у клубі");
-        }if (zooClub.addAnimalToPerson()) {
-            System.out.println("Додано нову тваринку члену клубу");
-        } else {
-            System.out.println("Член з таким ім'ям немає у клубі");
-        }
-        zooClub.showAllZooClub();
+        Map<Integer, UIMenu> codeUIMenu = new HashMap<>();
+        codeUIMenu.put(1, new AddPerson());
+        codeUIMenu.put(2, new AddAnimalToPerson());
+        codeUIMenu.put(3, new RemoveAnimalFromPerson());
+        codeUIMenu.put(4, new RemovePerson());
+        codeUIMenu.put(5, new RemoveAnimalFromAll());
+        codeUIMenu.put(6, new ShowZooClub());
+        codeUIMenu.put(7, new ExitProgram());
 
 
-
+        codeUIMenu.get(1).action(zooClub);
+        codeUIMenu.get(1).action(zooClub);
+        codeUIMenu.get(2).action(zooClub);
+        codeUIMenu.get(2).action(zooClub);
+        codeUIMenu.get(5).action(zooClub);
+        codeUIMenu.get(6).action(zooClub);
+        codeUIMenu.get(7).action(zooClub);
 
 
     }
