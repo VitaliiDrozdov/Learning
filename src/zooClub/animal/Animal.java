@@ -1,4 +1,4 @@
-package ZooClub;
+package zooClub.animal;
 
 import java.util.Objects;
 

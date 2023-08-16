@@ -1,9 +1,9 @@
-package ZooClub;
+package zooClub.animal;
 
 import java.util.Scanner;
 
 public class AnimalCreator {
-    Animal createAnimal() {
+    public Animal createAnimal() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть вид тваринки");
         String animalType = scanner.nextLine();

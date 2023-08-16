@@ -1,4 +1,7 @@
-package ZooClub;
+package zooClub;
+
+import zooClub.animal.Animal;
+import zooClub.animal.AnimalCreator;
 
 import java.util.*;
 

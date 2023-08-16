@@ -1,6 +1,6 @@
-package ZooClub.UIMenu;
+package zooClub.uIMenu;
 
-import ZooClub.ZooClub;
+import zooClub.ZooClub;
 
 public class RemoveAnimalFromAll implements UIMenu {
     @Override

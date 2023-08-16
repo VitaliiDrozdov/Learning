@@ -1,6 +1,6 @@
-package ZooClub.UIMenu;
+package zooClub.uIMenu;
 
-import ZooClub.ZooClub;
+import zooClub.ZooClub;
 
 public class RemovePerson implements UIMenu {
     @Override

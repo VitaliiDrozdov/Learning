@@ -1,4 +1,4 @@
-package ZooClub;
+package zooClub.animal;
 
 public enum AnimalType {
     Cat,

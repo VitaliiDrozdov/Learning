@@ -1,6 +1,6 @@
-package ZooClub.UIMenu;
+package zooClub.uIMenu;
 
-import ZooClub.ZooClub;
+import zooClub.ZooClub;
 
 public interface UIMenu {
     void action(ZooClub zooClub);

@@ -1,6 +1,6 @@
-package ZooClub;
+package zooClub;
 
-import ZooClub.UIMenu.*;
+import zooClub.uIMenu.*;
 
 import java.util.*;
 
