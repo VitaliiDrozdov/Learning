@@ -2,31 +2,35 @@ package zooClub;
 
 import zooClub.uIMenu.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
         ZooClub zooClub = new ZooClub();
+        boolean newZooClub = true;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("zooClub.data"));
+            zooClub = (ZooClub) objectInputStream.readObject();
+            newZooClub = false;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        } catch (ClassNotFoundException e2) {
+            e2.printStackTrace();
+        }
 
-        Map<Integer, UIMenu> codeUIMenu = new HashMap<>();
-        codeUIMenu.put(1, new AddPerson());
-        codeUIMenu.put(2, new AddAnimalToPerson());
-        codeUIMenu.put(3, new RemoveAnimalFromPerson());
-        codeUIMenu.put(4, new RemovePerson());
-        codeUIMenu.put(5, new RemoveAnimalFromAll());
-        codeUIMenu.put(6, new ShowZooClub());
-        codeUIMenu.put(7, new ExitProgram());
+        if (newZooClub) {
+            System.out.println("Вітаємо!\nСтворено новий Зооклуб");
+        } else {
+            System.out.println("Вітаємо!\nЗооклуб успішно завантажено");
+        }
 
-
-        codeUIMenu.get(1).action(zooClub);
-        codeUIMenu.get(1).action(zooClub);
-        codeUIMenu.get(2).action(zooClub);
-        codeUIMenu.get(2).action(zooClub);
-        codeUIMenu.get(5).action(zooClub);
-        codeUIMenu.get(6).action(zooClub);
-        codeUIMenu.get(7).action(zooClub);
-
-
+        new UIMenu().runUIMenu(zooClub);
     }
 }

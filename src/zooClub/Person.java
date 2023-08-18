@@ -1,8 +1,9 @@
 package zooClub;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Serializable {
     private final String humanName;
     private Integer humanAge;
 
@@ -12,10 +13,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "humanName='" + humanName + '\'' +
-                ", age=" + humanAge +
-                '}';
+        return "Учасник " + humanName + ", віком " + humanAge + " років";
     }
 
     @Override

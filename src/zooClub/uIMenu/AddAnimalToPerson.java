@@ -2,7 +2,7 @@ package zooClub.uIMenu;
 
 import zooClub.ZooClub;
 
-public class AddAnimalToPerson implements UIMenu {
+public class AddAnimalToPerson implements UIMenuAction {
     @Override
     public void action(ZooClub zooClub) {
         zooClub.addAnimalToPerson();

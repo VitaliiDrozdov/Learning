@@ -1,8 +1,9 @@
 package zooClub.animal;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Serializable {
     private AnimalType animalType;
     private String animalName;
 
@@ -22,10 +23,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "animalType=" + animalType +
-                ", animalName='" + animalName + '\'' +
-                '}';
+        return "тваринка - " + animalType + ", кличка - " + animalName;
     }
 
     @Override
@@ -44,15 +42,7 @@ public class Animal {
         return animalType;
     }
 
-    public void setAnimalType(AnimalType animalType) {
-        this.animalType = animalType;
-    }
-
     public String getAnimalName() {
         return animalName;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
     }
 }
