@@ -1,6 +1,6 @@
 package SU_27;
 
-public class SU27 extends Plane implements SpecialFeatures {
+public class SU27 extends Plane implements SpecialFeatures{
     private int maxSpeed;
     private String color;
 
